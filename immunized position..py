@@ -8,19 +8,6 @@ Original file is located at
 """
 
 def immunized_position(obligation, yield_annually, years_to_maturity_1, years_to_maturity_2):
-  """
-  Calculates the values of A and B in the immunized position.
-
-  Args:
-    obligation: The amount of the obligation.
-    yield_annually: The annual effective yield.
-    years_to_maturity_1: The number of years to maturity of the first bond.
-    years_to_maturity_2: The number of years to maturity of the second bond.
-
-  Returns:
-    A: The value of the investment in the first bond.
-    B: The value of the investment in the second bond.
-  """
 
   present_value_obligation = obligation / (1 + yield_annually)**(years_to_maturity_1 + years_to_maturity_2)
   A = present_value_obligation * (1 + yield_annually)**(-years_to_maturity_1)
